@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>gallery</title>
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>
+	
+	<div class="container-fluid">
+		
+		<div class = "card">
+			
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Photo Gallery</h5>
+				</div>
+			
+			
+			<div class="card-body">
+				
+				<span th:each="imgname :${imgNameList}">
+					
+					<img alt="" th:src="@{'/photos/'+${imgname}}">
+					
+				</span>
+				
+			</div>
+			
+			<div class="card-footer text-center">copyright@2023</div>
+			
+		</div>		
+	</div>
+
+</body>
+</html>
